@@ -1,0 +1,549 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: linear-gradient(115deg,#a5f1f6,#d0faf9,#d0faf9,#e8ffff,#fffff3,#fff4df,#ffffff);
+}
+.my-name{
+  text-shadow: 0 0.2rem 0.25rem black;
+}
+.my-name:hover{
+  text-shadow: 0 0.2rem 0.3rem rgb(12, 151, 144);
+}
+.header{
+  text-shadow: 0 0.2rem 0.3rem rgb(12, 151, 144);
+}
+.header:hover{
+  text-shadow: 0 0.2rem 0.2rem black;
+}
+
+/* HEADER/NAV BAR */
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background: rgb(12, 151, 144);
+  border: 1px solid #000;
+}
+nav {
+  background: rgb(12, 151, 144);
+  color: #f2f2f2;
+  padding: 10px 40px 10px 70px;
+  border-left: none;
+  border-right: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+nav ul div.items {
+  padding: 0 25px;
+  display: inline-flex;
+}
+nav ul div.items a {
+  text-decoration: none;
+  color: #f2f2f2;
+  font-size: 22px;
+  padding: 0 12px;
+}
+nav ul div.items a:hover {
+  color: rgb(12, 151, 144);
+  text-shadow: 0 0.2rem 0.3rem black;
+}
+nav ul div.items li:hover {
+  color: rgb(12, 151, 144);
+  transform: scale(1.1);
+  overflow: hidden;
+  transition: all linear 0.3s;
+}
+nav ul li.btn {
+  font-size: 29px;
+  flex: 1;
+  padding: 0 40px;
+  display: none;
+}
+nav ul li.btn span {
+  height: 42px;
+  width: 42px;
+  text-align: center;
+  line-height: 42px;
+  border: 1px solid #151515;
+  border-radius: 5px;
+  cursor: pointer;
+}
+nav ul li.btn.hide span:before{
+  content: '\f00d';
+}
+nav ul li.ctn {
+  font-size: 18px;
+  flex: 1;
+  padding: 0 40px;
+}
+nav ul li.ctn span {
+  height: 32px;
+  width: 32px;
+  text-align: center;
+  line-height: 32px;
+  border: 1px solid #151515;
+  border-radius: 5px;
+  cursor: pointer;
+}
+header nav a img.logo{
+  height:60px;
+  width:90px;
+}
+header nav a img.logo:hover{
+  transform: scale(1.09);
+  transition: all ease-in 0.3s;
+}
+
+/* BLEND-MODE VIDEO */
+
+.homepage-video{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homepage-video video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.homepage-video h2{
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background:rgba(219, 219, 219,0.5);
+  font-size: 5vw;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  line-height: 100vh;
+  mix-blend-mode:screen;
+}
+
+/* MY PERSONAL PROFILE */
+
+.me{
+  margin-top: 10px;
+  border-radius: 1rem;
+  width: 200px; 
+  height: auto;
+}
+.me:hover {
+  animation: img 1.5s linear 0s 1 normal;
+  filter: blur(0);
+  transition-delay: 0.3s;
+  transform: scale(1.05);
+  transition: all ease-in 0.3s;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 6px 1px darkgray;
+}
+.sig{
+  width: 100px;
+  height: auto;
+}
+.sig:hover{
+  margin-top: 2px;
+  filter: blur(0);
+  transition-delay: 0.3s;
+  transform: scale(1.05);
+  transition: all ease-in 0.3s;
+  box-shadow: 2px 2px 3px 1px darkgray;
+}
+
+@keyframes img {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*PROJECTS*/
+
+.project{
+  /*width: 20vw;*/
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(220deg,#d0efff,#39d6cf,#1b948e,#1b948e,#1b948e,#0c9790,#0a7e79,#054c48);
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 8px;
+  border: 2px solid rgb(61, 61, 61);
+  box-shadow: 5px 5px 3px 1px darkgray;
+  border-radius: 4px;
+}
+.project-pic{
+  width: 25vw;
+  height: 25vw;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  display: flex;
+  background: #b3edff;
+  flex-direction: column;
+  margin: 8px;
+  border: 2px solid rgb(61, 61, 61);
+  border-radius: 4px;
+}
+.project-des{
+  width: 25vw;
+  height: 25vw;
+  padding: 10px;
+  font-size: 1vw;
+  overflow: hidden;
+  display: flex;
+  background: linear-gradient(115deg,#d0efff,#39d6cf,#36cac3,#1b948e,#39d6cf,#0c9790,#0a7e79,#39d6cf,#1b948e,#1b948e,#1b948e,#39d6cf,#0c9790,#0a7e79,#02312f);
+  flex-direction: column;
+  margin: 8px;
+  border: 2px solid rgb(61, 61, 61);
+  border-radius: 4px;
+}
+
+/* SKILL SET STYLING */
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skillset {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  width: 60%;
+}
+.skill {
+  width: 6rem;
+  height: 9rem;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  position: relative;
+  margin: 20px 10px; 
+
+}
+.skill-icon {
+  width: 100%;
+  height: 100%;
+  background-color: #535353;
+  border-radius: 0.5rem;
+}
+.skill-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  border-radius: 0.7rem;
+  transition: opacity 0.3s;
+}
+.skill:hover .skill-icon img {
+  opacity: 0.1;
+}
+.skill-name {
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  text-shadow: 0 0.2rem 0.5rem rgba(219, 219, 219, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+.skill:hover .skill-name {
+  bottom: 2rem;
+  opacity: 1;
+  visibility: visible;
+}
+.skill-name h3 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 25;
+  line-height: 20px;
+  color: #eee;
+  text-align: center; 
+}
+
+/* ACHIEVEMENTS*/
+
+.achievements{
+  width: 60%;
+  border: 2px solid rgb(61, 61, 61);
+  box-shadow: 5px 5px 3px 1px darkgray;
+  border-radius: 4px;
+}
+
+@keyframes slider {
+    0% {left: 0;}
+   10% {left: 0;}
+   15% {left: -50%;}
+   20% {left: -50%;}
+   25% {left: -50%;}
+   30% {left: -100%;}
+   35% {left: -100%;}
+   40% {left: -150%;}
+   45% {left: -150%;}
+   50% {left: -200%;}
+   55% {left: -200%;}
+   60% {left: -250%;}
+   65% {left: -250%;}
+   70% {left: -300%;}
+   75% {left: -300%;}
+   80% {left: -350%;}
+   85% {left: -350%;}
+   90% {left: -400%;}
+   95% {left: -400%;}
+  100% {left: -0%;}
+}
+
+/* HOBBY SET STYLING */
+
+.hobbies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hobbyset {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  width: 60%;
+}
+.hobby {
+  width: 6em;
+  height: 9rem;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  position: relative;
+  margin: 20px 10px;
+}
+.hobby-pic {
+  width: 100%;
+  height: 100%;
+  background-color: #535353;
+  border-radius: 0.5rem;
+}
+.hobby-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  border-radius: 0.7rem;
+  transition: opacity 0.3s;
+}
+.hobby:hover .hobby-pic img {
+  opacity: 0.1;
+}
+.hobby-name {
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  text-shadow: 0 0.2rem 0.5rem rgba(219, 219, 219, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+.hobby:hover .hobby-name {
+  bottom: 3rem;
+  opacity: 1;
+  text-align: center;
+  visibility: visible;
+}
+.hobby-name h3 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 25;
+  line-height: 20px;
+  color: #eee;
+  text-align: center;
+}
+
+/* FOOTER/SOCIAL MEDIA LINKS */
+
+footer{
+  font-size: 25px;
+  height: 50px;
+}
+footer div div ul li:hover{
+  transform: scale(1.5);
+  transition: all ease-in 0.3s;
+}
+
+/* BACK TO TOP BUTTON */
+
+.bttop{
+  border:1px solid black;
+  color: rgba(0, 0, 0, 0.7);
+  background: lightgray;
+  border-radius:5px;
+  box-shadow:0.5px 0.5px 1px 1px darkgray ;
+  font-size:25px;
+  position:fixed;
+  bottom:20px;
+  right: 10px;
+}
+.bttop:hover{
+  transform: scale(1.1);
+  transition: all ease-in 0.3s;
+}
+
+/* MEDIA QUERY PART */
+
+@media screen and (max-width: 4052px) {
+	.proj{
+		flex-direction: column;
+	}
+}
+@media screen and (max-width: 890px) {
+  nav ul li.btn {
+    display: inline;
+    position: absolute;
+    right: 0;
+    padding-top: 20px;
+  }
+  nav {
+    z-index: 1;
+    padding: 9px 40px 9px 0;
+    position: relative;
+    height: 70px;
+  }
+  nav ul div.items {
+    z-index: -1;
+    position: absolute;
+    top: -380px;
+    right: 0;
+    width: 100%;
+    background: rgb(12, 151, 144);
+    display: inline-block;
+    transition: top 0.4s;
+  }
+  nav ul div.items.show {
+    top: 60px;
+  }
+  nav ul div.items li {
+    text-align: center;
+    line-height: 30px;
+    margin: 30px 0;
+  }
+  nav ul div.items li a {
+    font-size: 19px;
+  }
+  nav ul div.items a:hover {
+    color: rgb(19, 204, 195);
+    text-shadow: 0 0.2rem 0.3rem black;
+    border-radius: 15rem;
+    box-shadow: 1px 1px 5px rgb(51, 51, 51);
+  }
+  header nav a img.logo{
+    height:60px;
+    width:90px;
+  }
+  .proj {
+  	flex-direction:row;
+  }
+  .project {
+  	flex-direction:column;
+  }
+  .project-des{
+    padding: 7px 10px;
+  }
+  .achievements{
+    width: 70%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .me{
+    width: 150px;
+    height: auto;
+  }
+  footer{
+    font-size: 15px;
+    height: 40px;
+  }
+  .bttop{
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 405px) {
+  nav ul {
+    flex-wrap: nowrap;
+  }
+  nav ul div.items a:hover {
+    color:  rgb(19, 204, 195);
+    text-shadow: 0 0.2rem 0.3rem black;
+    border-radius: 15rem; 
+    box-shadow: 1px 1px 5px rgb(51, 51, 51);
+  }
+  nav ul li input {
+    width: 40vmin;
+  }
+  header nav a img.logo{
+    height:60px;
+    width:90px;
+  }
+  .proj {
+  	flex-direction: column;
+  }
+  .project-des{
+  	padding: 5px;
+  }
+  .achievements{
+    width: 80%;
+  }
+  .me{
+    width: 120px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 300px) {
+  .project-des{
+  	padding: 3px;
+  	font-size: 0.9vw;
+  }
+  .me{
+    width: 80px;
+    height: auto;
+  }
+  .sig{
+    width: 50px;
+    height: auto;
+  }
+  footer{
+    font-size: 10px;
+    height: 30px;
+  }
+  .bttop{
+    font-size: 15px;
+  }
+}
